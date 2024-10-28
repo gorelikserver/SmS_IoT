@@ -1,0 +1,19 @@
+serial:
+  port: 'COM9'
+  baudrate: 19200
+  timeout: 1
+
+monitor:
+  poll_interval: 60  # seconds
+  retry_delay: 5     # seconds between retries
+  max_retries: 3     # maximum number of login retries
+
+panel:
+  passcode: '333'   # Replace with your actual passcode
+
+logging:
+  level: 'INFO'
+  file: 'logs/monitor.log'
+  max_size: 1048576  # 1MB
+  backup_count: 5
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
