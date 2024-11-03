@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Dict, Any
 
 @dataclass
 class PointStatus:
@@ -50,7 +50,10 @@ class PointStatus:
 
 @dataclass
 class StatusChange:
+    """Represents a change in point status with both raw and enriched data"""
     change_type: str  # 'NEW', 'CHANGED', 'CLEARED'
     previous_status: Optional[PointStatus]
     new_status: Optional[PointStatus]
+    enriched_data: Optional[Dict[str, Any]] = None
+    previous_enriched_data: Optional[Dict[str, Any]] = None
     timestamp: datetime = datetime.now()

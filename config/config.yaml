@@ -1,5 +1,5 @@
 serial:
-  port: 'COM9'
+  port: 'COM5'
   baudrate: 19200
   timeout: 1
 
@@ -17,3 +17,9 @@ logging:
   max_size: 1048576  # 1MB
   backup_count: 5
   format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+points:
+  file: C:\Users\AvrahamG\PycharmProjects\SmS_IoT\src\points\points.csv
+  encoding: windows-1252
+  export_dir: C:\Users\AvrahamG\PycharmProjects\SmS_IoT\src\points\exports
+  export_encoding: utf-8
